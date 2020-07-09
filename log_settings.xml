@@ -1,8 +1,3 @@
-<config>
-<devices>
-<entry>
-<vsys>
-
 {%- if INCLUDE_Security_Profiles == 'yes' %}
 <profiles>
 <virus>
@@ -1193,7 +1188,3 @@
 </entry></wildfire-analysis></profiles><profile-group><entry name="Outbound">
   </entry></profile-group>  
   {% endif %}
-      </vsys>
-    </entry>
-  </devices>
-</config>
