@@ -12,6 +12,17 @@ variables:
     description: NGFW management IP address
     default: 192.168.0.1
     type_hint: ip_address
+    
+    - name: INCLUDE_Security Profiles
+    description: include the predefined OCD Security Profiles
+    default: 'no'
+    type_hint: dropdown
+    help_text: This includeds AV, IPS, VP, URL.
+    dd_list:
+      - key: 'yes'
+        value: 'yes'
+      - key: 'no'
+        value: 'no'
 
 snippets:
   - name: log_settings
