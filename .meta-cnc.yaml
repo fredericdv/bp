@@ -1,5 +1,5 @@
 name: Best_practice_settings
-label: LBest_practice_settings
+label: Best_practice_settings
 description: Example Best_practice_settings
 type: panos
 extends:
