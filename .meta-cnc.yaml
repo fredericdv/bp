@@ -13,7 +13,7 @@ variables:
     default: 192.168.0.1
     type_hint: ip_address
     
-    - name: INCLUDE_Security Profiles
+    - name: INCLUDE_Security_Profiles
     description: include the predefined OCD Security Profiles
     default: 'no'
     type_hint: dropdown
