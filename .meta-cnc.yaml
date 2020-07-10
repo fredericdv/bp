@@ -22,7 +22,8 @@ variables:
         value: 'yes'
       - key: 'no'
         value: 'no'
-
+        
+snippets:
  - name: profiles_virus
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/virus
     file: profiles_virus.xml
