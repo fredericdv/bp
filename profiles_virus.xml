@@ -160,4 +160,6 @@
   </decoder>
   <description>Use this profile for rules needing modifications to the standard</description>
 </entry>
+{% else %}
+<entry></entry>
 {% endif %}
