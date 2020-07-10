@@ -1,4 +1,4 @@
- {%- if MGMT_TYPE == "static" %}
+ {%- if INCLUDE_Security_Profiles == "yes" %}
 <entry name="Alert-Only-AV">
   <decoder>
     <entry name="ftp">
