@@ -1,3 +1,4 @@
+<profiles>
 <virus>
 <entry name="Alert-Only-AV">
   <decoder>
@@ -161,3 +162,4 @@
   <description>Use this profile for rules needing modifications to the standard</description>
 </entry>
 </virus>
+</profiles>
