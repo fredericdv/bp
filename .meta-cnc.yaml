@@ -25,5 +25,5 @@ variables:
         
 snippets:
   - name: profiles_virus
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/virus
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles
     file: profiles_virus.xml
