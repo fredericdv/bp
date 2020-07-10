@@ -1,5 +1,6 @@
 
 <virus>
+  {%- if av == "no" %}
 <entry name="Alert-Only-AV">
   <decoder>
     <entry name="ftp">
@@ -32,6 +33,7 @@
     </entry>
   </decoder>
 </entry>
+  {% endif %}
 <entry name="Outbound-AV">
   <decoder>
     <entry name="ftp">
