@@ -24,7 +24,7 @@ variables:
         value: 'no'
         
 snippets:
- {%- if av == "yes" %}
+ {% if av == "yes" %}
   - name: profiles_virus
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles
     file: profiles_virus.xml
