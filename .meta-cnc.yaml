@@ -1,11 +1,11 @@
-
-name: set_command_panos_v10_0
-label: set_command_panos_v10_0
-description: Iron-Skillet baseline configuration for a firewall
-dependency:
-# type of device configuration
+name: Best_practice_settings
+label: Best_practice_settings
+description: Example Best_practice_settings
 type: panos
 extends:
+
+labels:
+  service_type: userid
 
 # variables used in the configuration templates
 # type_hint defines the form field type in pan-cnc
