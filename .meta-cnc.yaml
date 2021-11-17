@@ -7,14 +7,6 @@ dependency:
 type: panos
 extends:
 
-# grouping of like snippets for dynamic menu creation in pan-cnc
-labels:
-  service_type: iron_skillet_set
-  collection:
-    - IronSkillet
-    - Configure
-    - Best Practice
-
 # variables used in the configuration templates
 # type_hint defines the form field type in pan-cnc
 variables:
@@ -109,5 +101,5 @@ variables:
     help_text: sets the expiration period for generated API keys
 
 snippets:
-  - name: iron_skillet_panos_full.conf
-    file: iron_skillet_panos_full.conf
+  - name: full.conf
+    file: full.conf
