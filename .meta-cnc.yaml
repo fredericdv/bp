@@ -4,7 +4,7 @@ label: set_command_panos_v10_0
 description: Iron-Skillet baseline configuration for a firewall
 dependency:
 # type of device configuration
-#type: template
+type: panos
 extends:
 
 # grouping of like snippets for dynamic menu creation in pan-cnc
