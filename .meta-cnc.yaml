@@ -209,6 +209,19 @@ variables:
         value: 'yes'
     -   key: 'no'
         value: 'no'
+        
+-   name: INCLUDE_OCD_ZONE_Protection
+    description: include the predefined OCD zone protection lists
+    default: 'no'
+    type_hint: dropdown
+
+    dd_list:
+    -   key: 'yes'
+        value: 'yes'
+    -   key: 'no'
+        value: 'no'
+                
+        
 
 snippets:
 
@@ -2695,6 +2708,7 @@ snippets:
           <strip-mptcp-option>global</strip-mptcp-option>
         </entry>
     cmd: set
+    when: INCLUDE_OCD_ZONE_Protection == 'yes'
 
 -   name: panos_ngfw_reports_simple_10_0.ironskillet_reports_host_visit_malicious_plus
     xpath: /config/shared/reports
