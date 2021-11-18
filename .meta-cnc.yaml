@@ -37,18 +37,6 @@ variables:
         value: 'yes'
     -   key: 'no'
         value: 'no'
-
--   name: config_dns
-    description: Configure the DNS primary and secondary servers
-    default: 'no'
-    type_hint: dropdown
-    help_text: Set to NO if the IronSkillet config is being applied to a device with
-        an existing DNS configuration
-    dd_list:
-    -   key: 'yes'
-        value: 'yes'
-    -   key: 'no'
-        value: 'no'
         
 
 -   name: MGMT_TYPE
@@ -88,7 +76,20 @@ variables:
     toggle_hint:
         source: MGMT_TYPE
         value: static
+        
 
+-   name: config_dns
+    description: Configure the DNS primary and secondary servers
+    default: 'no'
+    type_hint: dropdown
+    help_text: Set to NO if the IronSkillet config is being applied to a device with
+        an existing DNS configuration
+    dd_list:
+    -   key: 'yes'
+        value: 'yes'
+    -   key: 'no'
+        value: 'no'    
+    
 -   name: DNS_1
     description: primary dns server
     default: 8.8.8.8
