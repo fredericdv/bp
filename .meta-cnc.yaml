@@ -123,33 +123,18 @@ variables:
         source: config_fwname
         value: 'yes'
 
--   name: config_NTP
-    description: Configure the Firewall NTP servers
-    default: 'no'
-    type_hint: dropdown
-    help_text: Set to NO if the IronSkillet config is being applied to a device with
-        an existing NTP server
-    dd_list:
-    -   key: 'yes'
-        value: 'yes'
-    -   key: 'no'
-        value: 'no'
 
 -   name: NTP_1
     description: primary NTP server
     default: 0.pool.ntp.org
     type_hint: text
-     toggle_hint:
-        source: config_NTP
-        value: 'yes'
+
 
 -   name: NTP_2
     description: secondary NTP server
     default: 1.pool.ntp.org
     type_hint: text
-         toggle_hint:
-        source: config_NTP
-        value: 'yes'
+
 
 -   name: API_KEY_LIFETIME
     description: lifetime for the api key in minutes
