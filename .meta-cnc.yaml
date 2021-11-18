@@ -2661,20 +2661,11 @@ snippets:
 -   name: panos_ngfw_zone_protection_10_0.ironskillet_zone_protection
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/profiles/zone-protection-profile
     element: |-
-    
-          {%- if DEVICE_TYPE == "pa200" %}
-            {% set alarm = '100' %}
-            {% set activate = '200' %}
-            {% set maximal = '300' %}
-          {% elif DEVICE_TYPE == "pa220" %}
-            {% set alarm = '200' %}
-            {% set activate = '300' %}
-            {% set maximal = '400' %}
-          {% elif DEVICE_TYPE == "pa400" %}
+   
             % set alarm = '300' %}
             {% set activate = '400' %}
             {% set maximal = '500' %}
-          {% endif %}
+
         <entry name="OCD_Zone_Protection">
           <flood>
             <tcp-syn>
