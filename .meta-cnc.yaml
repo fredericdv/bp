@@ -55,10 +55,10 @@ variables:
     type_hint: dropdown
     help_text: select if the management interface will use DHCP or static configuration
     dd_list:
-    -   key: dhcp-client
-        value: dhcp-client
     -   key: static
         value: static
+    -   key: dhcp-client
+        value: dhcp-client
     toggle_hint:
         source: config_mgmt_intf
         value: 'yes'
