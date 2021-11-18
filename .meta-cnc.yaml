@@ -127,7 +127,7 @@ variables:
     default: 0.pool.ntp.org
     type_hint: text
     toggle_hint:
-        source: config_dns
+        source: config_ntp
         value: 'yes'
 
 -   name: NTP_2
@@ -135,7 +135,7 @@ variables:
     default: 1.pool.ntp.org
     type_hint: text
     toggle_hint:
-        source: config_dns
+        source: config_ntp
         value: 'yes'
 
 -   name: API_KEY_LIFETIME
