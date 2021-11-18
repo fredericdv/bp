@@ -119,9 +119,6 @@ variables:
     description: Firewall hostname
     default: panos-01
     type_hint: text
-        toggle_hint:
-        source: config_name
-        value: yes
 
 -   name: config_ntp
     description: Configure the NTP primary and secondary servers
