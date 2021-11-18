@@ -19,13 +19,24 @@ labels:
     - Configure
     - Best Practice
 
-# variables used in the configuration templatesssssss
+# variables used in the configuration templates
 # type_hint defines the form field type in pan-cnc
 variables:
   - name: FW_NAME
     description: Firewall hostname
     default: panos-01
     type_hint: text
+-   name: config_mgmt_intf
+    description: Configure the management interface IP settings
+    default: 'no'
+    type_hint: dropdown
+    help_text: Set to NO if the IronSkillet config is being applied to a device with
+        existing management IP settings
+    dd_list:
+    -   key: 'yes'
+        value: 'yes'
+    -   key: 'no'
+        value: 'no'
   - name: MGMT_TYPE
     description: firewall management IP type
     default: dhcp-client
@@ -36,6 +47,9 @@ variables:
         value: dhcp-client
       - key: static
         value: static
+            toggle_hint:
+        source: config_mgmt_intf
+        value: 'yes'
   - name: MGMT_IP
     description: NGFW management IP
     default: 192.0.2.6
