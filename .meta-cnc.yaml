@@ -1,11 +1,23 @@
-name: Best_practice_settings
-label: Best_practice_settings
-description: Example Best_practice_settings
-type: panos
+# full_panos is used to load a full NGFW configuration
+
+# snippet folder name
+name: skillet_full_panos_v10_0
+# label used for menu selection
+label: v10.0 Iron-Skillet Full XML Configuration for NGFW
+description: Iron-Skillet day one configuration for a firewall
+dependency:
+# type of device configuration
+type: template
 extends:
 
+# grouping of like snippets for dynamic menu creation in pan-cnc
 labels:
-  service_type: userid
+  service_type: iron_skillet_full
+  template_category: panos_full
+  collection:
+    - IronSkillet
+    - Configure
+    - Best Practice
 
 # variables used in the configuration templates
 # type_hint defines the form field type in pan-cnc
@@ -57,6 +69,10 @@ variables:
     description: admin username
     default: adminuser
     type_hint: text
+  - name: ADMINISTRATOR_PASSWORD
+    description: admin password
+    default: adminuser
+    type_hint: password
   - name: DNS_1
     description: primary dns server
     default: 8.8.8.8
@@ -99,7 +115,20 @@ variables:
     default: 525600
     type_hint: text
     help_text: sets the expiration period for generated API keys
+# option built into the templates to ignore the panw published external dynamic lists security rules
+# should ONLY be excluded based on licensing limitations outside of best practices
+# when 'yes' (default) will include the EDL rule
+  - name: INCLUDE_PAN_EDL
+    description: include the predefined Palo Alto Networks external lists security rules
+    default: 'no'
+    type_hint: dropdown
+    help_text: a valid threat license and content updates are required to access the panw external-lists used in the rules
+    dd_list:
+      - key: 'yes'
+        value: 'yes'
+      - key: 'no'
+        value: 'no'
 
 snippets:
-  - name: full.conf
-    file: full.conf
+  - name: panos-full
+    file: iron_skillet_panos_full.xml
