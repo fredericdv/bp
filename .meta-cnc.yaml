@@ -13,6 +13,19 @@ labels:
 
 variables:
 
+-   name: DEVICE_TYPE
+    description: What type of device are u using
+    default: 'pa220'
+    type_hint: dropdown
+    help_text: Select the right device type to adjust parameters
+    dd_list:
+    -   key: 'pa200'
+        value: 'pa200'
+    -   key: 'pa220'
+        value: 'pa220'
+    -   key: 'pa400'
+        value: 'pa400'
+
 -   name: config_mgmt_intf
     description: Configure the management interface IP settings
     default: 'no'
@@ -206,18 +219,6 @@ variables:
     help_text: IP address for the IPv6 sinkhole used in the anti-spyware security
         profile
        
-        -   name: DEVICE_TYPE
-    description: What type of device are u using
-    default: pa220
-    type_hint: dropdown
-    help_text: Select the right device type to adjust parameters
-     dd_list:
-    -   key: 'pa200'
-        value: 'pa200'
-    -   key: 'pa220'
-        value: 'pa220'
-    -   key: 'pa400'
-        value: 'pa400'
 
 -   name: INCLUDE_PAN_EDL
     description: include the predefined Palo Alto Networks external lists security
