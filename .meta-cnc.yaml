@@ -26,7 +26,7 @@ variables:
     description: Firewall hostname
     default: panos-01
     type_hint: text
--   name: config_mgmt_intf
+-   name: config_mgmt_interface
     description: Configure the management interface IP settings
     default: 'no'
     type_hint: dropdown
