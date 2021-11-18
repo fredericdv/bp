@@ -19,7 +19,7 @@ labels:
     - Configure
     - Best Practice
 
-# variables used in the configuration templates
+# variables used in the configuration templatesssssss
 # type_hint defines the form field type in pan-cnc
 variables:
   - name: FW_NAME
