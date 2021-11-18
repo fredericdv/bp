@@ -3,7 +3,7 @@ Skillet Metadata for: v10.0 Iron-Skillet for NGFW
 
 name: OCD_panos_v10_0
 
-label: v10.0 Iron-Skillet for NGFW
+label: v10.0 OCD-Skillet for NGFW
 
 description: group of snippets for ironskillet 10.0 panos configuration
 
