@@ -51,7 +51,7 @@ variables:
 
 -   name: MGMT_TYPE
     description: firewall management IP type
-    default: dhcp-client
+    default: static
     type_hint: dropdown
     help_text: select if the management interface will use DHCP or static configuration
     dd_list:
