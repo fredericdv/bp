@@ -321,6 +321,7 @@ snippets:
           </secondary-ntp-server>
         </ntp-servers>
     cmd: set
+    when: config_ntp == 'yes'
 
 -   name: panos_ngfw_device_system_10_0.ironskillet_device_system_login_banner
     xpath: /config/devices/entry[@name='localhost.localdomain']/deviceconfig/system
