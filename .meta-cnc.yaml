@@ -2661,45 +2661,59 @@ snippets:
 -   name: panos_ngfw_zone_protection_10_0.ironskillet_zone_protection
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/profiles/zone-protection-profile
     element: |-
+    
+          {%- if DEVICE_TYPE == "pa200" %}
+            {% set alarm = '100' %}
+            {% set activate = '200' %}
+            {% set maximal = '300' %}
+          {% elif DEVICE_TYPE == "pa220" %}
+            {% set alarm = '200' %}
+            {% set activate = '300' %}
+            {% set maximal = '400' %}
+          {% elif DEVICE_TYPE == "pa400" %}
+            % set alarm = '300' %}
+            {% set activate = '400' %}
+            {% set maximal = '500' %}
+          {% endif %}
         <entry name="OCD_Zone_Protection">
           <flood>
             <tcp-syn>
               <red>
-                <alarm-rate>10000</alarm-rate>
-                <activate-rate>10000</activate-rate>
-                <maximal-rate>40000</maximal-rate>
+                <alarm-rate>{{ alarm }}</alarm-rate>
+                <activate-rate>{{ activate }}</activate-rate>
+                <maximal-rate>{{ maximal }}</maximal-rate>
               </red>
               <enable>no</enable>
             </tcp-syn>
             <icmp>
               <red>
-                <alarm-rate>10000</alarm-rate>
-                <activate-rate>10000</activate-rate>
-                <maximal-rate>40000</maximal-rate>
+                <alarm-rate>{{ alarm }}</alarm-rate>
+                <activate-rate>{{ activate }}</activate-rate>
+                <maximal-rate>{{ maximal }}</maximal-rate>
               </red>
               <enable>no</enable>
             </icmp>
             <icmpv6>
               <red>
-                <alarm-rate>10000</alarm-rate>
-                <activate-rate>10000</activate-rate>
-                <maximal-rate>40000</maximal-rate>
+                <alarm-rate>{{ alarm }}</alarm-rate>
+                <activate-rate>{{ activate }}</activate-rate>
+                <maximal-rate>{{ maximal }}</maximal-rate>
               </red>
               <enable>no</enable>
             </icmpv6>
             <other-ip>
               <red>
-                <alarm-rate>10000</alarm-rate>
-                <activate-rate>10000</activate-rate>
-                <maximal-rate>40000</maximal-rate>
+                <alarm-rate>{{ alarm }}</alarm-rate>
+                <activate-rate>{{ activate }}</activate-rate>
+                <maximal-rate>{{ maximal }}</maximal-rate>
               </red>
               <enable>no</enable>
             </other-ip>
             <udp>
               <red>
-                <alarm-rate>10000</alarm-rate>
-                <activate-rate>10000</activate-rate>
-                <maximal-rate>40000</maximal-rate>
+                <alarm-rate>{{ alarm }}</alarm-rate>
+                <activate-rate>{{ activate }}</activate-rate>
+                <maximal-rate>{{ maximal }}</maximal-rate>
               </red>
               <enable>no</enable>
             </udp>
