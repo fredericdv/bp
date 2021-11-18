@@ -2,6 +2,12 @@ name: OCD_panos_v10_0
 
 label: v10.0 OCD-Skillet for NGFW
 
+
+
+# fix the zone protection shit !
+
+
+
 description: group of snippets for ironskillet 10.0 panos configuration
 
 type: panos
