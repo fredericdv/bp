@@ -70,8 +70,6 @@ variables:
     toggle_hint:
         source: MGMT_TYPE
         value: static
-        source: config_mgmt_intf
-        value: 'yes'
 
 -   name: MGMT_MASK
     description: NGFW management netmask
