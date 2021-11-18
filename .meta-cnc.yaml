@@ -55,13 +55,13 @@ variables:
     type_hint: dropdown
     help_text: select if the management interface will use DHCP or static configuration
     dd_list:
-    -   key: static
-        value: static
-    -   key: dhcp-client
-        value: dhcp-client
+    -   key: 'static'
+        value: 'static'
+    -   key: 'dhcp-client'
+        value: 'dhcp-client'
     toggle_hint:
         source: config_mgmt_intf
-        value: yes
+        value: 'yes'
 
 -   name: MGMT_IP
     description: NGFW management IP
@@ -69,7 +69,7 @@ variables:
     type_hint: ip_address
     toggle_hint:
         source: MGMT_TYPE
-        value: static
+        value: 'static'
 
 -   name: MGMT_MASK
     description: NGFW management netmask
