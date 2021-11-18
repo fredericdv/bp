@@ -22,6 +22,17 @@ labels:
 # variables used in the configuration templates
 # type_hint defines the form field type in pan-cnc
 variables:
+  -   name: config_mgmt_intf
+    description: Configure the management interface IP settings
+    default: 'no'
+    type_hint: dropdown
+    help_text: Set to NO if the IronSkillet config is being applied to a device with
+        existing management IP settings
+    dd_list:
+    -   key: 'yes'
+        value: 'yes'
+    -   key: 'no'
+        value: 'no'
   - name: FW_NAME
     description: Firewall hostname
     default: panos-01
