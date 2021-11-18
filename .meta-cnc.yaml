@@ -120,7 +120,7 @@ variables:
     default: panos-01
     type_hint: text
     toggle_hint:
-        source: config_ntp
+        source: config_name
         value: 'yes'
 
 -   name: config_ntp
