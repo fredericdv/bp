@@ -103,11 +103,25 @@ variables:
         source: config_dns
         value: 'yes'
 
+-   name: config_name
+    description: Configure the name of the device
+    default: 'no'
+    type_hint: dropdown
+    help_text: Set to NO if the IronSkillet config is being applied to a device with
+        an existing Name
+    dd_list:
+    -   key: 'yes'
+        value: 'yes'
+    -   key: 'no'
+        value: 'no'
 
 -   name: FW_NAME
     description: Firewall hostname
     default: panos-01
     type_hint: text
+        toggle_hint:
+        source: config_name
+        value: 'yes'
 
 -   name: config_ntp
     description: Configure the NTP primary and secondary servers
@@ -352,6 +366,8 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/deviceconfig/system
     element: <hostname>{{ FW_NAME }}</hostname>
     cmd: set
+    when: config_name == 'yes'
+    
 
 -   name: panos_ngfw_device_setting_10_0.ironskillet_device_setting_ctd
     xpath: /config/devices/entry[@name='localhost.localdomain']/deviceconfig/setting
