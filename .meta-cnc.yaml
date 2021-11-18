@@ -2662,9 +2662,7 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/profiles/zone-protection-profile
     element: |-
    
-            % set alarm = '300' %}
-            {% set activate = '400' %}
-            {% set maximal = '500' %}
+
 
         <entry name="OCD_Zone_Protection">
           <flood>
