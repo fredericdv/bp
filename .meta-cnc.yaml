@@ -26,6 +26,22 @@ variables:
     description: Firewall hostname
     default: panos-01
     type_hint: text
+
+
+-   name: MGMT_TYPE
+    description: firewall management IP type
+    default: dhcp-client
+    type_hint: dropdown
+    help_text: select if the management interface will use DHCP or static configuration
+    dd_list:
+    -   key: dhcp-client
+        value: dhcp-client
+    -   key: static
+        value: static
+    toggle_hint:
+        source: config_mgmt_intf
+        value: 'yes'
+
   - name: MGMT_TYPE
     description: firewall management IP type
     default: dhcp-client
