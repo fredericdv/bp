@@ -70,7 +70,6 @@ variables:
     toggle_hint:
         source: MGMT_TYPE
         value: static
-        toggle_hint:
         source: config_mgmt_intf
         value: 'yes'
 
