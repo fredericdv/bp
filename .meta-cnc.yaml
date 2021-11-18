@@ -2635,7 +2635,7 @@ snippets:
 -   name: panos_ngfw_zone_protection_10_0.ironskillet_zone_protection
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/profiles/zone-protection-profile
     element: |-
-        <entry name="Recommended_Zone_Protection">
+        <entry name="OCD_Zone_Protection">
           <flood>
             <tcp-syn>
               <red>
