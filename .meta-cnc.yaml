@@ -2668,9 +2668,9 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/profiles/zone-protection-profile
     element: |-
       {%- if DEVICE_TYPE == "200" %}
-        {% set minimum = 250 %}
-        {% set activate = 500 %}
-        {% set maximum = 1000 %}
+        {% set minimum = 200 %}
+        {% set activate = 300 %}
+        {% set maximum = 400 %}
       {% elif DEVICE_TYPE == "220" %}
         {% set minimum = 220 %}
         {% set activate = 320 %}
@@ -2682,15 +2682,18 @@ snippets:
       {% endif %}
 
 
-      <entry name="OCD-Trust-Zone-Protection">
+
+    <entry name="OCD-Trust-Zone-Protection">
       <flood>
         <tcp-syn>
-          <enable>yes</enable>
+
+
           <syn-cookies>
             <alarm-rate>{{ minimum }}</alarm-rate>
             <activate-rate>{{ activate }}</activate-rate>
             <maximal-rate>{{ maximum }}</maximal-rate>
           </syn-cookies>
+			<enable>yes</enable>
         </tcp-syn>
         <icmp>
           <red>
@@ -2752,6 +2755,7 @@ snippets:
           </action>
           <interval>2</interval>
           <threshold>100</threshold>
+
         </entry>
         <entry name="8002">
           <action>
@@ -2781,6 +2785,124 @@ snippets:
       <discard-tcp-split-handshake>yes</discard-tcp-split-handshake>
       <discard-overlapping-tcp-segment-mismatch>yes</discard-overlapping-tcp-segment-mismatch>
     </entry>
+
+	    <entry name="OCD-Untrust-Zone-Protection">
+      <flood>
+        <tcp-syn>
+
+          <syn-cookies>
+            <alarm-rate>{{ minimum }}</alarm-rate>
+            <activate-rate>{{ activate }}</activate-rate>
+            <maximal-rate>{{ maximum }}</maximal-rate>
+          </syn-cookies>
+		  <enable>yes</enable>
+        </tcp-syn>
+        <icmp>
+          <red>
+            <alarm-rate>{{ minimum }}</alarm-rate>
+            <activate-rate>{{ activate }}</activate-rate>
+            <maximal-rate>{{ maximum }}</maximal-rate>
+          </red>
+          <enable>yes</enable>
+        </icmp>
+        <icmpv6>
+          <red>
+            <alarm-rate>{{ minimum }}</alarm-rate>
+            <activate-rate>{{ activate }}</activate-rate>
+            <maximal-rate>{{ maximum }}</maximal-rate>
+          </red>
+          <enable>yes</enable>
+        </icmpv6>
+        <other-ip>
+          <red>
+            <alarm-rate>{{ minimum }}</alarm-rate>
+            <activate-rate>{{ activate }}</activate-rate>
+            <maximal-rate>{{ maximum }}</maximal-rate>
+          </red>
+          <enable>yes</enable>
+        </other-ip>
+        <udp>
+          <red>
+            <alarm-rate>{{ minimum }}</alarm-rate>
+            <activate-rate>{{ activate }}</activate-rate>
+            <maximal-rate>{{ maximum }}</maximal-rate>
+          </red>
+          <enable>yes</enable>
+        </udp>
+      </flood>
+      <ipv6>
+        <filter-ext-hdr>
+          <hop-by-hop-hdr>yes</hop-by-hop-hdr>
+          <routing-hdr>yes</routing-hdr>
+          <dest-option-hdr>yes</dest-option-hdr>
+        </filter-ext-hdr>
+        <ignore-inv-pkt>
+          <dest-unreach>yes</dest-unreach>
+          <pkt-too-big>yes</pkt-too-big>
+          <time-exceeded>yes</time-exceeded>
+          <param-problem>yes</param-problem>
+          <redirect>yes</redirect>
+        </ignore-inv-pkt>
+        <ipv4-compatible-address>yes</ipv4-compatible-address>
+        <anycast-source>yes</anycast-source>
+        <needless-fragment-hdr>yes</needless-fragment-hdr>
+        <icmpv6-too-big-small-mtu-discard>yes</icmpv6-too-big-small-mtu-discard>
+        <options-invalid-ipv6-discard>yes</options-invalid-ipv6-discard>
+        <reserved-field-set-discard>yes</reserved-field-set-discard>
+      </ipv6>
+      <scan>
+        <entry name="8001">
+          <action>
+            <block-ip>
+              <track-by>source-and-destination</track-by>
+              <duration>3600</duration>
+            </block-ip>
+          </action>
+          <interval>2</interval>
+          <threshold>100</threshold>
+        </entry>
+        <entry name="8002">
+          <action>
+            <block-ip>
+              <track-by>source-and-destination</track-by>
+              <duration>3600</duration>
+            </block-ip>
+          </action>
+          <interval>10</interval>
+          <threshold>100</threshold>
+        </entry>
+        <entry name="8003">
+          <action>
+            <block-ip>
+              <track-by>source-and-destination</track-by>
+              <duration>3600</duration>
+            </block-ip>
+          </action>
+          <interval>2</interval>
+          <threshold>100</threshold>
+        </entry>
+      </scan>
+      <discard-ip-spoof>yes</discard-ip-spoof>
+      <strict-ip-check>yes</strict-ip-check>
+      <discard-strict-source-routing>yes</discard-strict-source-routing>
+      <discard-security>yes</discard-security>
+      <discard-loose-source-routing>yes</discard-loose-source-routing>
+      <discard-stream-id>yes</discard-stream-id>
+      <discard-timestamp>yes</discard-timestamp>
+      <discard-unknown-option>yes</discard-unknown-option>
+      <discard-record-route>yes</discard-record-route>
+      <discard-malformed-option>yes</discard-malformed-option>
+      <discard-tcp-split-handshake>yes</discard-tcp-split-handshake>
+      <discard-overlapping-tcp-segment-mismatch>yes</discard-overlapping-tcp-segment-mismatch>
+      <remove-tcp-timestamp>yes</remove-tcp-timestamp>
+      <discard-icmp-ping-zero-id>yes</discard-icmp-ping-zero-id>
+      <discard-icmp-frag>yes</discard-icmp-frag>
+      <discard-icmp-large-packet>yes</discard-icmp-large-packet>
+      <suppress-icmp-timeexceeded>no</suppress-icmp-timeexceeded>
+      <suppress-icmp-needfrag>yes</suppress-icmp-needfrag>
+    </entry>
+
+
     cmd: set
     when: INCLUDE_OCD_ZONE_Protection == 'yes'
 
