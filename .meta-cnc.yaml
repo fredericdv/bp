@@ -2668,9 +2668,9 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/profiles/zone-protection-profile
     element: |-
       {%- if DEVICE_TYPE == "200" %}
-        {% set minimum = 200 %}
-        {% set activate = 300 %}
-        {% set maximum = 400 %}
+        {% set minimum = 250 %}
+        {% set activate = 500 %}
+        {% set maximum = 1000 %}
       {% elif DEVICE_TYPE == "220" %}
         {% set minimum = 220 %}
         {% set activate = 320 %}
@@ -2782,7 +2782,7 @@ snippets:
       <discard-overlapping-tcp-segment-mismatch>yes</discard-overlapping-tcp-segment-mismatch>
     </entry>
 
-	    <entry name="OCD-Untrust-Zone-Protection">
+    <entry name="OCD-Untrust-Zone-Protection">
       <flood>
         <tcp-syn>
           <enable>yes</enable>
