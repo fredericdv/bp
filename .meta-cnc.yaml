@@ -2675,7 +2675,7 @@ snippets:
             <tcp-syn>
               <red>
                 <alarm-rate>{{ DEVICE_TYPE }}</alarm-rate>
-                <activate-rate>{{ DEVICE_TYPE }}* 2</activate-rate>
+                <activate-rate>{{{{ DEVICE_TYPE }}* 2}}</activate-rate>
                 <maximal-rate>{{ DEVICE_TYPE }}</maximal-rate>
               </red>
               <enable>no</enable>
