@@ -21,16 +21,16 @@ variables:
 
 -   name: DEVICE_TYPE
     description: What type of device are u using
-    default: 'pa220'
+    default: '220'
     type_hint: dropdown
     help_text: Select the right device type to adjust parameters
     dd_list:
     -   key: 'pa200'
-        value: 'pa200'
+        value: '200'
     -   key: 'pa220'
-        value: 'pa220'
+        value: '220'
     -   key: 'pa400'
-        value: 'pa400'
+        value: '400'
 
 -   name: config_mgmt_intf
     description: Configure the management interface IP settings
@@ -2674,41 +2674,41 @@ snippets:
           <flood>
             <tcp-syn>
               <red>
-                <alarm-rate>{{ alarm }}</alarm-rate>
-                <activate-rate>{{ activate }}</activate-rate>
-                <maximal-rate>{{ maximal }}</maximal-rate>
+                <alarm-rate>{{ DEVICE_TYPE }}</alarm-rate>
+                <activate-rate>{{ DEVICE_TYPE }}</activate-rate>
+                <maximal-rate>{{ DEVICE_TYPE }}</maximal-rate>
               </red>
               <enable>no</enable>
             </tcp-syn>
             <icmp>
               <red>
-                <alarm-rate>{{ alarm }}</alarm-rate>
-                <activate-rate>{{ activate }}</activate-rate>
-                <maximal-rate>{{ maximal }}</maximal-rate>
+                <alarm-rate>{{ DEVICE_TYPE }}</alarm-rate>
+                <activate-rate>{{ DEVICE_TYPE }}</activate-rate>
+                <maximal-rate>{{ DEVICE_TYPE }}</maximal-rate>
               </red>
               <enable>no</enable>
             </icmp>
             <icmpv6>
               <red>
-                <alarm-rate>{{ alarm }}</alarm-rate>
-                <activate-rate>{{ activate }}</activate-rate>
-                <maximal-rate>{{ maximal }}</maximal-rate>
+                <alarm-rate>{{ DEVICE_TYPE }}</alarm-rate>
+                <activate-rate>{{ DEVICE_TYPE }}</activate-rate>
+                <maximal-rate>{{ DEVICE_TYPE }}</maximal-rate>
               </red>
               <enable>no</enable>
             </icmpv6>
             <other-ip>
               <red>
-                <alarm-rate>{{ alarm }}</alarm-rate>
-                <activate-rate>{{ activate }}</activate-rate>
-                <maximal-rate>{{ maximal }}</maximal-rate>
+                <alarm-rate>{{ DEVICE_TYPE }}</alarm-rate>
+                <activate-rate>{{ DEVICE_TYPE }}</activate-rate>
+                <maximal-rate>{{ DEVICE_TYPE }}</maximal-rate>
               </red>
               <enable>no</enable>
             </other-ip>
             <udp>
               <red>
-                <alarm-rate>{{ alarm }}</alarm-rate>
-                <activate-rate>{{ activate }}</activate-rate>
-                <maximal-rate>{{ maximal }}</maximal-rate>
+                <alarm-rate>{{ DEVICE_TYPE }}</alarm-rate>
+                <activate-rate>{{ DEVICE_TYPE }}</activate-rate>
+                <maximal-rate>{{ DEVICE_TYPE }}</maximal-rate>
               </red>
               <enable>no</enable>
             </udp>
