@@ -2669,8 +2669,6 @@ snippets:
     element: |-
       {%- if DEVICE_TYPE == "200" %}
         {% set minimum = "200" %}
-        {% set activate = "300" %}
-        {% set maximum = "400" %}
       {% elif DEVICE_TYPE == "220" %}
 
       {% elif DEVICE_TYPE == "400" %}
@@ -2683,8 +2681,8 @@ snippets:
             <tcp-syn>
               <red>
                 <alarm-rate>{{ minimum }}</alarm-rate>
-                <activate-rate>{{ activate }}</activate-rate>
-                <maximal-rate>{{ maximum }}</maximal-rate>
+                <activate-rate>{{ DEVICE_TYPE }}</activate-rate>
+                <maximal-rate>{{ DEVICE_TYPE }}</maximal-rate>
               </red>
               <enable>no</enable>
             </tcp-syn>
