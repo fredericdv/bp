@@ -2686,9 +2686,9 @@ snippets:
           <flood>
             <tcp-syn>
               <red>
-                <alarm-rate>{{ DEVICE_TYPE }}</alarm-rate>
-                <activate-rate>{{ DEVICE_TYPE * 2}}</activate-rate>
-                <maximal-rate>{{ DEVICE_TYPE }}</maximal-rate>
+                <alarm-rate>{{ minimum }}</alarm-rate>
+                <activate-rate>{{ activate }}</activate-rate>
+                <maximal-rate>{{ maximum }}</maximal-rate>
               </red>
               <enable>no</enable>
             </tcp-syn>
