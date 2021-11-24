@@ -2668,7 +2668,7 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/profiles/zone-protection-profile
     element: |-
       {%- if DEVICE_TYPE == "200" %}
-        {% minimum = "200" %}
+        {% set minimum = "200" %}
       {% elif DEVICE_TYPE == "220" %}
 
       {% elif DEVICE_TYPE == "400" %}
