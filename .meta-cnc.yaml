@@ -1951,7 +1951,6 @@ snippets:
             </mode>
             <log-severity>high</log-severity>
             <block>
-              <member>Block</member>
               <member>Allow</member>
               <member>abortion</member>
               <member>abused-drugs</member>
@@ -2132,7 +2131,6 @@ snippets:
             </mode>
             <log-severity>medium</log-severity>
             <alert>
-              <member>Block</member>
               <member>Allow</member>
               <member>abortion</member>
               <member>abused-drugs</member>
