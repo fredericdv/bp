@@ -188,11 +188,8 @@ variables:
     toggle_hint:
         source: config_admin_user
         value: 'yes'
+        
 
--   name: SYSLOG_SERVER
-    description: syslog server ip address
-    default: 192.0.2.2
-    type_hint: text
 
 -   name: EMAIL_PROFILE_GATEWAY
     description: email gateway address for critical alerts
