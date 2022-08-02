@@ -793,26 +793,29 @@ snippets:
 -   name: panos_ngfw_profile_custom_urlFiltering_10_0.ironskillet_custom_url_category_block
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category
     element: |-
-        <entry name="Block">
+        <entry name="OCD-Block">
           <type>URL List</type>
         </entry>
     cmd: set
-
+    when: INCLUDE_OCD_ZONE_Protection == 'yes'
+    
 -   name: panos_ngfw_profile_custom_urlFiltering_10_0.ironskillet_custom_url_category_allow
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category
     element: |-
-        <entry name="Allow">
+        <entry name="OCD-Allow">
           <type>URL List</type>
         </entry>
     cmd: set
-
+    when: INCLUDE_OCD_ZONE_Protection == 'yes'
+    
 -   name: panos_ngfw_profile_custom_urlFiltering_10_0.ironskillet_custom_url_category_no_decrypt
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category
     element: |-
-        <entry name="Custom-No-Decrypt">
+        <entry name="OCD-No-Decrypt">
           <type>URL List</type>
         </entry>
     cmd: set
+    when: INCLUDE_OCD_ZONE_Protection == 'yes'
 
 -   name: panos_ngfw_profile_decryption_10_0.ironskillet_decryption_profile
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/decryption
@@ -866,24 +869,6 @@ snippets:
 
 
 
--   name: panos_ngfw_rulebase_default_security_rules_10_0.ironskillet_rulebase_default_security_rules
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/default-security-rules
-    element: |-
-        <rules>
-          <entry name="intrazone-default">
-            <action>allow</action>
-            <log-start>no</log-start>
-            <log-end>yes</log-end>
-            <log-setting>default</log-setting>
-          </entry>
-          <entry name="interzone-default">
-            <action>drop</action>
-            <log-start>no</log-start>
-            <log-end>yes</log-end>
-            <log-setting>default</log-setting>
-          </entry>
-        </rules>
-    cmd: set
 
 -   name: panos_ngfw_rulebase_security_10_0.ironskillet_rulebase_security
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase
