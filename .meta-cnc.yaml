@@ -1345,7 +1345,7 @@ snippets:
         </entry>
     cmd: set
     
-    -   name: ironskillet_antivirus_outbound
+-   name: ironskillet_antivirus_outbound
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/virus
     element: |-
       <entry name="Outbound-AV">
