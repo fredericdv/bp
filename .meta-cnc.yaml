@@ -874,11 +874,6 @@ snippets:
             <action>allow</action>
             <log-start>no</log-start>
             <log-end>yes</log-end>
-            <profile-setting>
-              <group>
-                <member>Inbound</member>
-              </group>
-            </profile-setting>
             <log-setting>default</log-setting>
           </entry>
           <entry name="interzone-default">
