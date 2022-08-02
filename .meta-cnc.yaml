@@ -808,7 +808,7 @@ snippets:
           <type>URL List</type>
         </entry>
     cmd: set
-    when: INCLUDE_OCD_ZONE_Protection == 'yes'
+    when: INCLUDE_OCD_security_Profiles == 'yes'
     
 -   name: panos_ngfw_profile_custom_urlFiltering_10_0.ironskillet_custom_url_category_allow
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category
@@ -817,7 +817,7 @@ snippets:
           <type>URL List</type>
         </entry>
     cmd: set
-    when: INCLUDE_OCD_ZONE_Protection == 'yes'
+    when: INCLUDE_OCD_security_Profiles == 'yes'
     
 -   name: panos_ngfw_profile_custom_urlFiltering_10_0.ironskillet_custom_url_category_no_decrypt
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category
@@ -826,7 +826,7 @@ snippets:
           <type>URL List</type>
         </entry>
     cmd: set
-    when: INCLUDE_OCD_ZONE_Protection == 'yes'
+    when: INCLUDE_OCD_security_Profiles == 'yes'
     
 -   name: panos_ngfw_profile_decryption_10_0.ironskillet_decryption_profile
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/decryption
@@ -1006,21 +1006,21 @@ snippets:
           </entry>
         </rules>
     cmd: set
-    when: INCLUDE_OCD_ZONE_Protection == 'yes'
+    when: INCLUDE_OCD_security_Profiles == 'yes'
 
 -   name: panos_ngfw_zone_protection_10_0.ironskillet_zone_protection
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/profiles/zone-protection-profile
     element: |-
       {%- if DEVICE_TYPE == "200" %}
         {% set minimum = 200 %}
-        {% set activate = 300 %}
+        {% set activate = 200 %}
         {% set maximum = 400 %}
       {% elif DEVICE_TYPE == "220" %}
         {% set minimum = 220 %}
         {% set activate = 320 %}
         {% set maximum = 420 %}
       {% elif DEVICE_TYPE == "400" %}
-        {% set minimum = 240 %}
+        {% set minimum = 400 %}
         {% set activate = 340 %}
         {% set maximum = 440 %}
       {% endif %}
@@ -1344,3 +1344,121 @@ snippets:
           <email-profile>Sample_Email_Profile</email-profile>
         </entry>
     cmd: set
+    
+    -   name: ironskillet_antivirus_outbound
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/virus
+    element: |-
+      <entry name="Outbound-AV">
+        <decoder>
+          <entry name="ftp">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+          <entry name="http">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+          <entry name="http2">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+          <entry name="imap">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+          <entry name="pop3">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+          <entry name="smb">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+          <entry name="smtp">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+        </decoder>
+        <mlav-engine-filebased-enabled>
+          <entry name="Windows Executables">
+            <mlav-policy-action>enable</mlav-policy-action>
+          </entry>
+          <entry name="PowerShell Script 1">
+            <mlav-policy-action>enable</mlav-policy-action>
+          </entry>
+          <entry name="PowerShell Script 2">
+            <mlav-policy-action>enable</mlav-policy-action>
+          </entry>
+          <entry name="Executable Linked Format">
+            <mlav-policy-action>enable</mlav-policy-action>
+          </entry>
+        </mlav-engine-filebased-enabled>
+      </entry>
+    cmd: set
+      when: INCLUDE_OCD_security_Profiles == 'yes'
+      
+-   name: ironskillet_antivirus_inbound
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/virus
+    element: |-
+      <entry name="Inbound-AV">
+        <decoder>
+          <entry name="ftp">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+          <entry name="http">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+          <entry name="http2">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+          <entry name="imap">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+          <entry name="pop3">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+          <entry name="smb">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+          <entry name="smtp">
+            <action>reset-both</action>
+            <wildfire-action>reset-both</wildfire-action>
+            <mlav-action>reset-both</mlav-action>
+          </entry>
+        </decoder>
+        <mlav-engine-filebased-enabled>
+          <entry name="Windows Executables">
+            <mlav-policy-action>enable</mlav-policy-action>
+          </entry>
+          <entry name="PowerShell Script 1">
+            <mlav-policy-action>enable</mlav-policy-action>
+          </entry>
+          <entry name="PowerShell Script 2">
+            <mlav-policy-action>enable</mlav-policy-action>
+          </entry>
+          <entry name="Executable Linked Format">
+            <mlav-policy-action>enable</mlav-policy-action>
+          </entry>
+        </mlav-engine-filebased-enabled>
+      </entry>
+    cmd: set
+     when: INCLUDE_OCD_security_Profiles == 'yes'
