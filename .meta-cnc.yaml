@@ -253,6 +253,17 @@ variables:
         value: 'yes'
     -   key: 'no'
         value: 'no'
+        
+-   name: INCLUDE_OCD_security_Profiles
+    description: include the predefined OCD Security profiles
+    default: 'no'
+    type_hint: dropdown
+
+    dd_list:
+    -   key: 'yes'
+        value: 'yes'
+    -   key: 'no'
+        value: 'no'
 
 -   name: SINKHOLE_IPV4
     description: sinkhole FQDN IPv4
@@ -815,7 +826,8 @@ snippets:
           <type>URL List</type>
         </entry>
     cmd: set
-
+    when: INCLUDE_OCD_ZONE_Protection == 'yes'
+    
 -   name: panos_ngfw_profile_decryption_10_0.ironskillet_decryption_profile
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/decryption
     element: |-
