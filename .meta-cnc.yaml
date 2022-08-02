@@ -1348,7 +1348,7 @@ snippets:
 -   name: panos_ngfw_profile_antivirus_10_1.ironskillet_antivirus_alert_all
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/virus
     element: |-
-        <entry name="Alert-Only-AV">
+        <entry name="OCD-Alert-Only-AV">
           <decoder>
             <entry name="ftp">
               <action>alert</action>
@@ -1397,6 +1397,12 @@ snippets:
               <mlav-policy-action>enable(alert-only)</mlav-policy-action>
             </entry>
             <entry name="Executable Linked Format">
+              <mlav-policy-action>enable(alert-only)</mlav-policy-action>
+            </entry>
+            <entry name="MSOffice">
+              <mlav-policy-action>enable(alert-only)</mlav-policy-action>
+            </entry>
+            <entry name="Shell">
               <mlav-policy-action>enable(alert-only)</mlav-policy-action>
             </entry>
           </mlav-engine-filebased-enabled>
@@ -1407,7 +1413,7 @@ snippets:
 -   name: panos_ngfw_profile_antivirus_10_1.ironskillet_antivirus_outbound
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/virus
     element: |-
-        <entry name="Outbound-AV">
+        <entry name="OCD-External-AV">
           <decoder>
             <entry name="ftp">
               <action>reset-both</action>
@@ -1456,6 +1462,12 @@ snippets:
               <mlav-policy-action>enable</mlav-policy-action>
             </entry>
             <entry name="Executable Linked Format">
+              <mlav-policy-action>enable</mlav-policy-action>
+            </entry>
+            <entry name="MSOffice">
+              <mlav-policy-action>enable</mlav-policy-action>
+            </entry>
+            <entry name="Shell">
               <mlav-policy-action>enable</mlav-policy-action>
             </entry>
           </mlav-engine-filebased-enabled>
@@ -1466,7 +1478,7 @@ snippets:
 -   name: panos_ngfw_profile_antivirus_10_1.ironskillet_antivirus_inbound
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/virus
     element: |-
-        <entry name="Inbound-AV">
+        <entry name="OCD-Internal-AV">
           <decoder>
             <entry name="ftp">
               <action>reset-both</action>
@@ -1515,6 +1527,12 @@ snippets:
               <mlav-policy-action>enable</mlav-policy-action>
             </entry>
             <entry name="Executable Linked Format">
+              <mlav-policy-action>enable</mlav-policy-action>
+            </entry>
+                <entry name="MSOffice">
+              <mlav-policy-action>enable</mlav-policy-action>
+            </entry>
+            <entry name="Shell">
               <mlav-policy-action>enable</mlav-policy-action>
             </entry>
           </mlav-engine-filebased-enabled>
