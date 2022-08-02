@@ -2124,8 +2124,8 @@ snippets:
             </mode>
             <log-severity>medium</log-severity>
             <alert>
-              <member>Block</member>
-              <member>Allow</member>
+              <member>OCD-Block</member>
+              <member>OCD-Allow</member>
               <member>abortion</member>
               <member>abused-drugs</member>
               <member>adult</member>
