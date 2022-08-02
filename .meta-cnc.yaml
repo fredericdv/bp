@@ -2110,6 +2110,7 @@ snippets:
             <member>malware</member>
             <member>phishing</member>
           </block>
+           </entry>
     cmd: set
     when: INCLUDE_OCD_security_Profiles == 'yes' 
     
