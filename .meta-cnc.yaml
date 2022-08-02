@@ -966,7 +966,7 @@ snippets:
               <member>financial-services</member>
               <member>government</member>
               <member>health-and-medicine</member>
-              <member>Custom-No-Decrypt</member>
+              <member>Custom-OCD-No-Decrypt</member>
             </category>
             <service>
               <member>any</member>
@@ -996,6 +996,7 @@ snippets:
           </entry>
         </rules>
     cmd: set
+when: INCLUDE_OCD_ZONE_Protection == 'yes'
 
 -   name: panos_ngfw_zone_protection_10_0.ironskillet_zone_protection
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/profiles/zone-protection-profile
