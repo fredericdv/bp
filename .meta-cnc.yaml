@@ -1951,7 +1951,8 @@ snippets:
             </mode>
             <log-severity>high</log-severity>
             <block>
-              <member>Allow</member>
+              <member>OCD-Block</member>
+              <member>OCD-Allow</member>
               <member>abortion</member>
               <member>abused-drugs</member>
               <member>adult</member>
@@ -2031,7 +2032,7 @@ snippets:
           <log-http-hdr-referer>yes</log-http-hdr-referer>
           <log-http-hdr-xff>yes</log-http-hdr-xff>
           <alert>
-            <member>Allow</member>
+            <member>OCD-Allow</member>
             <member>abortion</member>
             <member>abused-drugs</member>
             <member>adult</member>
@@ -2103,7 +2104,7 @@ snippets:
             <member>web-hosting</member>
           </alert>
           <block>
-            <member>Block</member>
+            <member>OCD-Block</member>
             <member>command-and-control</member>
             <member>grayware</member>
             <member>malware</member>
@@ -2131,6 +2132,7 @@ snippets:
             </mode>
             <log-severity>medium</log-severity>
             <alert>
+              <member>Block</member>
               <member>Allow</member>
               <member>abortion</member>
               <member>abused-drugs</member>
