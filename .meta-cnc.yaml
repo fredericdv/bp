@@ -189,7 +189,25 @@ variables:
         source: config_admin_user
         value: 'yes'
         
-
+-   name: config_SYSLOG_SERVER
+    description: Configure the admin user and password
+    default: 'no'
+    type_hint: dropdown
+    help_text: Set to NO if the IronSkillet config is being applied to a device with
+        an existing syslog 
+    dd_list:
+    -   key: 'yes'
+        value: 'yes'
+    -   key: 'no'
+        value: 'no'
+        
+-   name: SYSLOG_SERVER
+    description: syslog server ip address
+    default: 192.0.2.2
+    type_hint: text
+        toggle_hint:
+        source: config_SYSLOG_SERVER
+        value: 'yes'
 
 -   name: EMAIL_PROFILE_GATEWAY
     description: email gateway address for critical alerts
