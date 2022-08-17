@@ -1110,7 +1110,7 @@ snippets:
            <strict-ip-check>yes</strict-ip-check>
            <discard-icmp-ping-zero-id>yes</discard-icmp-ping-zero-id>
            <discard-icmp-large-packet>yes</discard-icmp-large-packet>
-<anycast-source>yes</anycast-source>
+           <anycast-source>yes</anycast-source>
 <filter-ext-hdr>yes</filter-ext-hdr>
 <icmpv6-too-big-small-mtu-discard>yes</icmpv6-too-big-small-mtu-discard>
 <ignore-inv-pkt>yes</ignore-inv-pkt>
@@ -1126,8 +1126,6 @@ snippets:
 <routing-header-255>yes</routing-header-255>
 <routing-header-3>yes</routing-header-3>
 <routing-header-4-252>yes</routing-header-4-252>
-
-
         </entry>
     cmd: set
     when: INCLUDE_OCD_ZONE_Protection == 'yes'
