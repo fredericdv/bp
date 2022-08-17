@@ -1035,12 +1035,12 @@ snippets:
         <entry name="OCD_Zone_Protection">
           <flood>
             <tcp-syn>
-              <syn-cookies>
+              <red>
                 <alarm-rate>{{ minimum }}</alarm-rate>
                 <activate-rate>{{ activate }}</activate-rate>
                 <maximal-rate>{{ maximum }}</maximal-rate>
-              </syn-cookies>
-              <enable>no</enable>
+              </red>
+              <enable>yes</enable>
             </tcp-syn>
             <icmp>
               <red>
