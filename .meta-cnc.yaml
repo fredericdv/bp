@@ -1111,21 +1111,21 @@ snippets:
            <discard-icmp-ping-zero-id>yes</discard-icmp-ping-zero-id>
            <discard-icmp-large-packet>yes</discard-icmp-large-packet>
            <anycast-source>yes</anycast-source>
-<filter-ext-hdr>yes</filter-ext-hdr>
-<icmpv6-too-big-small-mtu-discard>yes</icmpv6-too-big-small-mtu-discard>
-<ignore-inv-pkt>yes</ignore-inv-pkt>
-<ipv4-compatible-address>yes</ipv4-compatible-address>
-<multicast-source>yes</multicast-source>
-<needless-fragment-hdr>yes</needless-fragment-hdr>
-<options-invalid-ipv6-discard>yes</options-invalid-ipv6-discard>
-<reserved-field-set-discard>yes</reserved-field-set-discard>
-<routing-header-0>yes</routing-header-0>
-<routing-header-1>yes</routing-header-1>
-<routing-header-253>yes</routing-header-253>
-<routing-header-254>yes</routing-header-254>
-<routing-header-255>yes</routing-header-255>
-<routing-header-3>yes</routing-header-3>
-<routing-header-4-252>yes</routing-header-4-252>
+            <filter-ext-hdr>yes</filter-ext-hdr>
+            <icmpv6-too-big-small-mtu-discard>yes</icmpv6-too-big-small-mtu-discard>
+            <ignore-inv-pkt>yes</ignore-inv-pkt>
+            <ipv4-compatible-address>yes</ipv4-compatible-address>
+            <multicast-source>yes</multicast-source>
+            <needless-fragment-hdr>yes</needless-fragment-hdr>
+            <options-invalid-ipv6-discard>yes</options-invalid-ipv6-discard>
+            <reserved-field-set-discard>yes</reserved-field-set-discard>
+            <routing-header-0>yes</routing-header-0>
+            <routing-header-1>yes</routing-header-1>
+            <routing-header-253>yes</routing-header-253>
+            <routing-header-254>yes</routing-header-254>
+            <routing-header-255>yes</routing-header-255>
+            <routing-header-3>yes</routing-header-3>
+            <routing-header-4-252>yes</routing-header-4-252>
         </entry>
     cmd: set
     when: INCLUDE_OCD_ZONE_Protection == 'yes'
