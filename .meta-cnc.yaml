@@ -1113,12 +1113,10 @@ snippets:
            <ipv6>
            <anycast-source>yes</anycast-source>
             <icmpv6-too-big-small-mtu-discard>yes</icmpv6-too-big-small-mtu-discard>
-            <ignore-inv-pkt>yes</ignore-inv-pkt>
             <ipv4-compatible-address>yes</ipv4-compatible-address>
             <multicast-source>yes</multicast-source>
             <needless-fragment-hdr>yes</needless-fragment-hdr>
             <options-invalid-ipv6-discard>yes</options-invalid-ipv6-discard>
-            <reserved-field-set-discard>yes</reserved-field-set-discard>
             <routing-header-0>yes</routing-header-0>
             <routing-header-1>yes</routing-header-1>
             <routing-header-253>yes</routing-header-253>
