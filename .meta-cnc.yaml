@@ -4,7 +4,7 @@ label: v10.0 OCD-Skillet for NGFW
 
 
 
-# fix the zone protection shit !
+
 
 
 
@@ -1027,7 +1027,7 @@ snippets:
         {% set maximum = 420 %}
       {% elif DEVICE_TYPE == "400" %}
         {% set minimum = 400 %}
-        {% set activate = 340 %}
+        {% set activate = 400 %}
         {% set maximum = 440 %}
       {% endif %}
 
@@ -1040,7 +1040,7 @@ snippets:
                 <activate-rate>{{ activate }}</activate-rate>
                 <maximal-rate>{{ maximum }}</maximal-rate>
               </syn-cookies>
-              <enable>yes</enable>
+              <enable>no</enable>
             </tcp-syn>
             <icmp>
               <red>
@@ -1048,7 +1048,7 @@ snippets:
         <activate-rate>{{ activate }}</activate-rate>
         <maximal-rate>{{ maximum }}</maximal-rate>
               </red>
-              <enable>no</enable>
+              <enable>yes</enable>
             </icmp>
             <icmpv6>
               <red>
@@ -1056,7 +1056,7 @@ snippets:
               <activate-rate>{{ activate }}</activate-rate>
               <maximal-rate>{{ maximum }}</maximal-rate>
               </red>
-              <enable>no</enable>
+              <enable>yes</enable>
             </icmpv6>
             <other-ip>
               <red>
@@ -1064,7 +1064,7 @@ snippets:
               <activate-rate>{{ activate }}</activate-rate>
               <maximal-rate>{{ maximum }}</maximal-rate>
               </red>
-              <enable>no</enable>
+              <enable>yes</enable>
             </other-ip>
             <udp>
               <red>
@@ -1072,7 +1072,7 @@ snippets:
                 <activate-rate>{{ activate }}</activate-rate>
                 <maximal-rate>{{ maximum }}</maximal-rate>
               </red>
-              <enable>no</enable>
+              <enable>yes</enable>
             </udp>
           </flood>
           <scan>
