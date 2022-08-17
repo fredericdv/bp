@@ -1104,12 +1104,7 @@ snippets:
           <discard-security>yes</discard-security>
           <discard-stream-id>yes</discard-stream-id>
           <discard-unknown-option>yes</discard-unknown-option>
-          <discard-record-route>yes</discard-record-route>
-          <discard-timestamp>yes</discard-loose-source-routing>
-          <discard-malformed-option>yes</discard-timestamp>
-          <strict-ip-check>yes</strict-ip-check>
-          <remove-tcp-timestamp>yes</remove-tcp-timestamp>
-          <strip-tcp-fast-open-and-data>no</strip-tcp-fast-open-and-data>
+          
           <strip-mptcp-option>global</strip-mptcp-option>
         </entry>
     cmd: set
