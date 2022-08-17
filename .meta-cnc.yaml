@@ -1105,6 +1105,8 @@ snippets:
           <discard-stream-id>yes</discard-stream-id>
           <discard-unknown-option>yes</discard-unknown-option>
           <discard-record-route>yes</discard-record-route>
+          <discard-timestamp>yes</discard-timestamp>
+          <discard-malformed-option>yes</discard-malformed-option>
         </entry>
     cmd: set
     when: INCLUDE_OCD_ZONE_Protection == 'yes'
