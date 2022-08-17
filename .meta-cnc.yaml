@@ -1078,28 +1078,36 @@ snippets:
           <scan>
             <entry name="8001">
               <action>
-                <alert/>
+                <block/>
               </action>
               <interval>2</interval>
               <threshold>100</threshold>
             </entry>
             <entry name="8002">
               <action>
-                <alert/>
+                <block/>
               </action>
               <interval>10</interval>
               <threshold>100</threshold>
             </entry>
             <entry name="8003">
               <action>
-                <alert/>
+                <block/>
               </action>
               <interval>2</interval>
               <threshold>100</threshold>
             </entry>
           </scan>
           <discard-ip-spoof>yes</discard-ip-spoof>
-          <discard-malformed-option>yes</discard-malformed-option>
+          <discard-strict-source-routing>yes</discard-strict-source-routing>
+          <discard-loose-source-routing>yes</discard-loose-source-routing>
+          <discard-security>yes</discard-security>
+          <discard-stream-id>yes</discard-stream-id>
+          <discard-unknown-option>yes</discard-unknown-option>
+          <discard-record-route>yes</discard-record-route>
+          <discard-timestamp>yes</discard-loose-source-routing>
+          <discard-malformed-option>yes</discard-timestamp>
+          <strict-ip-check>yes</strict-ip-check>
           <remove-tcp-timestamp>yes</remove-tcp-timestamp>
           <strip-tcp-fast-open-and-data>no</strip-tcp-fast-open-and-data>
           <strip-mptcp-option>global</strip-mptcp-option>
