@@ -1112,7 +1112,6 @@ snippets:
            <discard-icmp-large-packet>yes</discard-icmp-large-packet>
            <ipv6>
            <anycast-source>yes</anycast-source>
-            <filter-ext-hdr>yes</filter-ext-hdr>
             <icmpv6-too-big-small-mtu-discard>yes</icmpv6-too-big-small-mtu-discard>
             <ignore-inv-pkt>yes</ignore-inv-pkt>
             <ipv4-compatible-address>yes</ipv4-compatible-address>
