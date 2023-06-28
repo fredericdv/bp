@@ -209,24 +209,44 @@ variables:
         source: config_SYSLOG_SERVER
         value: 'yes'
 
+-   name: config_mail
+    description: Configure the Mail for alerts
+    default: 'no'
+    type_hint: dropdown
+    help_text: Set to NO if the IronSkillet config is being applied to a device with
+        an existing mail config
+    dd_list:
+    -   key: 'yes'
+        value: 'yes'
+    -   key: 'no'
+        value: 'no'
+
 -   name: EMAIL_PROFILE_GATEWAY
     description: email gateway address for critical alerts
     default: 192.0.2.1
     type_hint: text
     help_text: email server profile configuration under Device --> Server Profiles
+    toggle_hint:
+    source: cconfig_mail
+    value: 'yes'
 
 -   name: EMAIL_PROFILE_FROM
     description: from address in email alerts
     default: sentfrom@yourdomain.com
     type_hint: text
     help_text: email server profile configuration under Device --> Server Profiles
+    toggle_hint:
+    source: cconfig_mail
+    value: 'yes'
 
 -   name: EMAIL_PROFILE_TO
     description: to address in email alerts
     default: sendto@yourdomain.com
     type_hint: text
     help_text: email server profile configuration under Device --> Server Profiles
-
+    toggle_hint:
+    source: cconfig_mail
+    value: 'yes'
 
 
 
