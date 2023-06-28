@@ -21,7 +21,7 @@ variables:
 
 -   name: DEVICE_TYPE
     description: What type of device are u using
-    default: '220'
+    default: 'pa-220'
     type_hint: dropdown
     help_text: Select the right device type to adjust parameters
     dd_list:
