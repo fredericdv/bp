@@ -227,8 +227,8 @@ variables:
     type_hint: text
     help_text: email server profile configuration under Device --> Server Profiles
     toggle_hint:
-    source: cconfig_mail
-    value: 'yes'
+      source: cconfig_mail
+      value: 'yes'
 
 -   name: EMAIL_PROFILE_FROM
     description: from address in email alerts
@@ -236,8 +236,8 @@ variables:
     type_hint: text
     help_text: email server profile configuration under Device --> Server Profiles
     toggle_hint:
-    source: cconfig_mail
-    value: 'yes'
+      source: cconfig_mail
+      value: 'yes'
 
 -   name: EMAIL_PROFILE_TO
     description: to address in email alerts
@@ -245,8 +245,8 @@ variables:
     type_hint: text
     help_text: email server profile configuration under Device --> Server Profiles
     toggle_hint:
-    source: cconfig_mail
-    value: 'yes'
+      source: cconfig_mail
+      value: 'yes'
 
 
 
