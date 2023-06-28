@@ -589,6 +589,7 @@ snippets:
           </entry>
         </syslog>
     cmd: set
+    when: config_SYSLOG_SERVER == 'yes'
 
 -   name: panos_ngfw_shared_log_settings_10_0.ironskillet_shared_log_settings_syslog_forwarding
     xpath: /config/shared/log-settings
@@ -605,6 +606,7 @@ snippets:
           </match-list>
         </system>
     cmd: set
+    when: config_SYSLOG_SERVER == 'yes'
 
 -   name: panos_ngfw_shared_log_settings_10_0.ironskillet_shared_log_settings_log_forwarding
     xpath: /config/shared/log-settings
@@ -621,6 +623,7 @@ snippets:
           </match-list>
         </config>
     cmd: set
+    when: config_SYSLOG_SERVER == 'yes'
 
 -   name: panos_ngfw_shared_log_settings_10_0.ironskillet_shared_log_settings_userid_forwarding
     xpath: /config/shared/log-settings
@@ -653,6 +656,7 @@ snippets:
           </match-list>
         </hipmatch>
     cmd: set
+    when: config_SYSLOG_SERVER == 'yes'
 
 -   name: panos_ngfw_shared_log_settings_10_0.ironskillet_shared_log_settings_gp_forwarding
     xpath: /config/shared/log-settings
@@ -669,6 +673,7 @@ snippets:
           </match-list>
         </globalprotect>
     cmd: set
+    when: config_SYSLOG_SERVER == 'yes'
 
 -   name: panos_ngfw_shared_log_settings_10_0.ironskillet_shared_log_settings_ip_tag_forwarding
     xpath: /config/shared/log-settings
@@ -685,6 +690,7 @@ snippets:
           </match-list>
         </iptag>
     cmd: set
+    when: config_SYSLOG_SERVER == 'yes'
 
 -   name: panos_ngfw_shared_log_settings_email_profile_10_0.ironskillet_shared_log_settings_email_profile
     xpath: /config/shared/log-settings
@@ -703,6 +709,7 @@ snippets:
           </entry>
         </email>
     cmd: set
+    when: config_mail == 'yes'
 
 -   name: panos_ngfw_shared_log_settings_email_system_critical_10_0.ironskillet_shared_log_settings_email_system_critical
     xpath: /config/shared/log-settings/system/match-list
@@ -715,6 +722,7 @@ snippets:
              <description>Email Critical System Logs</description>
         </entry>
     cmd: set
+    when: config_mail == 'yes'
 
 -   name: panos_ngfw_tag_10_0.ironskillet_tag_outbound
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/tag
@@ -812,6 +820,7 @@ snippets:
           </match-list>
         </entry>
     cmd: set
+    when: config_SYSLOG_SERVER == 'yes'
 
 -   name: panos_ngfw_log_settings_profiles_email_10_0.ironskillet_log_settings_email
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/log-settings/profiles/entry[@name='default']/match-list
@@ -826,6 +835,7 @@ snippets:
           <send-to-panorama>no</send-to-panorama>
         </entry>
     cmd: set
+    when: config_mail == 'yes'
 
 -   name: panos_ngfw_profile_custom_urlFiltering_10_0.ironskillet_custom_url_category_block
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category
