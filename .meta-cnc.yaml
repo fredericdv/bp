@@ -1073,109 +1073,108 @@ snippets:
     element: |-
       {%- if DEVICE_TYPE == "pa-220" %}
         {% set minimum = 840 %}
-        {% set activate = 2100 % }
-        {% set maximum = 2940 % }				
+        {% set activate = 2100 %}
+        {% set maximum = 2940 %}				
       {%- elif DEVICE_TYPE == "pa-410" %}
         {% set minimum = 2400 %}
-        {% set activate = 6000 % }
-        {% set maximum = 8400 % }				
+        {% set activate = 6000 %}
+        {% set maximum = 8400 %}				
       {%- elif DEVICE_TYPE == "pa-415" %}
         {% set minimum = 2400 %}
-        {% set activate = 6000 % }
-        {% set maximum = 8400 % }				
+        {% set activate = 6000 %}
+        {% set maximum = 8400 %}				
       {%- elif DEVICE_TYPE == "pa-440" %}
         {% set minimum = 7500 %}
-        {% set activate = 18750 % }
-        {% set maximum = 26250 % }				
+        {% set activate = 18750 %}
+        {% set maximum = 26250 %}				
       {%- elif DEVICE_TYPE == "pa-445" %}
         {% set minimum = 7500 %}
-        {% set activate = 18750 % }
-        {% set maximum = 26250 % }				
+        {% set activate = 18750 %}
+        {% set maximum = 26250 %}				
       {%- elif DEVICE_TYPE == "pa-450" %}
         {% set minimum = 10200 %}
-        {% set activate = 25500 % }
-        {% set maximum = 35700 % }				
+        {% set activate = 25500 %}
+        {% set maximum = 35700 %}				
       {%- elif DEVICE_TYPE == "pa-460" %}
         {% set minimum = 14600 %}
-        {% set activate = 36500 % }
-        {% set maximum = 51100 % }				
+        {% set activate = 36500 %}
+        {% set maximum = 51100 %}				
       {%- elif DEVICE_TYPE == "pa-820" %}
         {% set minimum = 1620 %}
-        {% set activate = 4050 % }
-        {% set maximum = 5670 % }				
+        {% set activate = 4050 %}
+        {% set maximum = 5670 %}				
       {%- elif DEVICE_TYPE == "pa-850" %}
         {% set minimum = 2620 %}
-        {% set activate = 6550 % }
-        {% set maximum = 9170 % }				
+        {% set activate = 6550 %}
+        {% set maximum = 9170 %}				
       {%- elif DEVICE_TYPE == "pa-1410" %}
         {% set minimum = 20000 %}
-        {% set activate = 50000 % }
-        {% set maximum = 70000 % }				
+        {% set activate = 50000 %}
+        {% set maximum = 70000 %}				
       {%- elif DEVICE_TYPE == "pa-1420" %}
         {% set minimum = 30000 %}
-        {% set activate = 75000 % }
-        {% set maximum = 105000 % }				
+        {% set activate = 75000 %}
+        {% set maximum = 105000 %}				
       {%- elif DEVICE_TYPE == "pa-3220" %}
         {% set minimum = 9200 %}
-        {% set activate = 23000 % }
-        {% set maximum = 32200 % }				
+        {% set activate = 23000 %}
+        {% set maximum = 32200 %}				
       {%- elif DEVICE_TYPE == "pa-3250" %}
         {% set minimum = 11600 %}
-        {% set activate = 29000 % }
-        {% set maximum = 40600 % }				
+        {% set activate = 29000 %}
+        {% set maximum = 40600 %}				
       {%- elif DEVICE_TYPE == "pa-3260" %}
         {% set minimum = 16800 %}
-        {% set activate = 42000 % }
-        {% set maximum = 58800 % }				
+        {% set activate = 42000 %}
+        {% set maximum = 58800 %}				
       {%- elif DEVICE_TYPE == "pa-3410" %}
         {% set minimum = 29000 %}
-        {% set activate = 72500 % }
-        {% set maximum = 101500 % }				
+        {% set activate = 72500 %}
+        {% set maximum = 101500 %}				
       {%- elif DEVICE_TYPE == "pa-3420" %}
         {% set minimum = 41000 %}
-        {% set activate = 102500 % }
-        {% set maximum = 143500 % }				
+        {% set activate = 102500 %}
+        {% set maximum = 143500 %}				
       {%- elif DEVICE_TYPE == "pa-3430" %}
         {% set minimum = 48000 %}
-        {% set activate = 120000 % }
-        {% set maximum = 168000 % }				
+        {% set activate = 120000 %}
+        {% set maximum = 168000 %}				
       {%- elif DEVICE_TYPE == "pa-3440" %}
         {% set minimum = 53600 %}
-        {% set activate = 134000 % }
-        {% set maximum = 187600 % }				
+        {% set activate = 134000 %}
+        {% set maximum = 187600 %}				
       {%- elif DEVICE_TYPE == "pa-5220" %}
         {% set minimum = 30000 %}
-        {% set activate = 75000 % }
-        {% set maximum = 105000 % }				
+        {% set activate = 75000 %}
+        {% set maximum = 105000 %}				
       {%- elif DEVICE_TYPE == "pa-5250" %}
         {% set minimum = 73600 %}
-        {% set activate = 184000 % }
-        {% set maximum = 257600 % }				
+        {% set activate = 184000 %}
+        {% set maximum = 257600 %}				
       {%- elif DEVICE_TYPE == "pa-5260" %}
         {% set minimum = 100000 %}
-        {% set activate = 250000 % }
-        {% set maximum = 350000 % }				
+        {% set activate = 250000 %}
+        {% set maximum = 350000 %}				
       {%- elif DEVICE_TYPE == "pa-5280" %}
         {% set minimum = 100000 %}
-        {% set activate = 250000 % }
-        {% set maximum = 350000 % }				
+        {% set activate = 250000 %}
+        {% set maximum = 350000 %}				
       {%- elif DEVICE_TYPE == "pa-5410" %}
         {% set minimum = 54000 %}
-        {% set activate = 135000 % }
-        {% set maximum = 189000 % }				
+        {% set activate = 135000 %}
+        {% set maximum = 189000 %}				
       {%- elif DEVICE_TYPE == "pa-5420" %}
         {% set minimum = 74000 %}
-        {% set activate = 185000 % }
-        {% set maximum = 259000 % }				
+        {% set activate = 185000 %}
+        {% set maximum = 259000 %}				
       {%- elif DEVICE_TYPE == "pa-5430" %}
         {% set minimum = 56000 %}
-        {% set activate = 140000 % }
-        {% set maximum = 196000 % }				
+        {% set activate = 140000 %}
+        {% set maximum = 196000 %}				
       {%- elif DEVICE_TYPE == "pa-5440" %}
         {% set minimum = 78000 %}
-        {% set activate = 195000 % }
-        {% set maximum = 273000 % }				   
- 
+        {% set activate = 195000 %}
+        {% set maximum = 273000 %}				   
       {% endif %}
 
 
