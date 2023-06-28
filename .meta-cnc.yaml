@@ -425,11 +425,6 @@ snippets:
         Log off immediately if you are not an authorized user.</login-banner>
     cmd: set
 
--   name: panos_ngfw_device_system_10_0.ironskillet_device_system_timezone
-    xpath: /config/devices/entry[@name='localhost.localdomain']/deviceconfig/system
-    element: <timezone>UTC</timezone>
-    cmd: set
-
 -   name: panos_ngfw_device_system_10_0.ironskillet_device_system_hostname
     xpath: /config/devices/entry[@name='localhost.localdomain']/deviceconfig/system
     element: <hostname>{{ FW_NAME }}</hostname>
